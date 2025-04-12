@@ -321,3 +321,10 @@ footer {
         max-width: 80px;  /* Slightly smaller on mobile */
     }
 }
+
+@media screen and (max-width: 768px) {
+    #mainnav ul li a {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
