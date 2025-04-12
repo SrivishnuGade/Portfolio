@@ -108,7 +108,12 @@ a { color: #4574b5; }
 
 .primary { background:#b5b5b5; }
 .secondary { background:#efefef; }
-
+.header-logo {
+    max-width: 150px;  /* Adjust this value to your preferred size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 /****************** Header and Main Navigation ****************/
 
@@ -123,9 +128,22 @@ header .wrapper {
 }
 
 .logo-container {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;  /* Centers items vertically */
+    gap: 30px;  /* Adds space between logo and name */
+}
+
+.logo-container h1 {
+    margin-right: 20px;  /* Additional spacing on the right of the name */
+}
+
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 #logo {
@@ -296,4 +314,10 @@ footer {
 	.projects article {
 		width: 25%;
 	}
+}
+
+@media screen and (max-width: 768px) {
+    .header-logo {
+        max-width: 80px;  /* Slightly smaller on mobile */
+    }
 }
