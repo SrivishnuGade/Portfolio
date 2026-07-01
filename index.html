@@ -1,16 +1,17 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-
-	<!--/ /---- Put your name in the title of the page ----/ /-->
-	<title>Srivishnu Muni Gade</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Srivishnu Muni Gade | Portfolio</title>
 	
 	<!--/ /-------- Normalize CSS --------/ /-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 	
-	<!--/ /-------- Google Fonts --------/ /-->
-	<!-- Add a link to google fonts here if you want them -->
+	<!--/ /-------- Google Fonts (Plus Jakarta Sans) --------/ /-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	
 	<!--/ /-------- Font Awesome --------/ /-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -18,199 +19,522 @@
 	<!--/ /-------- Your Styles --------/ /-->
 	<link href="styles.css" rel="stylesheet">
 
-	<!--/ /---Put a short description for your site below. 20 words or less---/ /-->
-	<meta description="A short description for your site...">
+	<!--/ /-------- Three.js --------/ /-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-	<!--/ /-------- Needed For Mobile Devices --------/ /-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<!--/ /--- SEO Meta Description ---/ /-->
+	<meta name="description" content="Srivishnu Muni Gade - Computer Science Engineer. SDE Intern at Apple (5G RRC), Technical Intern at Cisco. Specializing in systems programming, 5G networks, and high-fidelity simulations.">
 </head>
 
 <body>
-	
-    <!-- ------------------------------------------------------
-    The site is designed to be mobile first. The wrapper elements
-	are in place for when you get to desktop size to contain the 
-	content.
-    ------------------------------------------------------- -->
-    
-	<header class="primary">
-        <div class="wrapper">
-            
-			<div class="logo-container">
-				<h1>Srivishnu<br>Muni<br>Gade</h1>
+	<!-- Scroll Progress Bar -->
+	<div class="scroll-progress"></div>
 
-				<!-- ------------------------------------------------------
-				Note that the image of the logo is linked to the home page.
-				------------------------------------------------------- -->
-				<a href="index.html">
-                    <img src="logo.png" alt="logo" class="header-logo">
+	<!-- Floating Glass Header -->
+	<header class="floating-header">
+        <div class="wrapper header-wrapper">
+			<div class="logo-container">
+				<a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Srivishnu Muni Gade Logo" class="header-logo">
                 </a>
+				<h1 class="header-title">Srivishnu<br>Muni<br>Gade</h1>
 			</div>
             
-            
-			<!-- ------------------------------------------------------
-            The navigation here is linking to the sections further down
-            the page.
-            ------------------------------------------------------- -->
 			<nav id="mainnav">
                 <ul>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#work">Projects</a></li>
                     <li><a href="#about-contact">About</a></li>
                     <li><a href="#about-contact">Contact</a></li>
                 </ul>
             </nav>
-            
         </div>
-        
     </header>
     
-    <!-- ------------------------------------------------------
-    This is the work section, which has two parts: the featured
-	section and the projects section.
-    ------------------------------------------------------- -->
-    
+    <!-- Hero / Introduction Hook -->
+    <section id="hero-intro">
+        <!-- Three.js canvas fills the hero background -->
+        <div id="hero-canvas-container" aria-hidden="true"></div>
+   		<div class="wrapper">
+			<div class="intro-block animate-on-scroll">
+				<span class="greeting-badge">Software Engineer</span>
+				<h2 class="hero-heading">Engineering real-time systems & wireless software at the frontier of connectivity</h2>
+				<p class="hero-lead">I'm Srivishnu Muni Gade &mdash; a highly adaptable CS Engineer with hands-on industry experience in <strong>5G RRC modem software</strong> at Apple and <strong>5G core network infrastructure</strong> at Cisco. As a remarkably fast learner with multi-disciplinary expertise across <strong>C/C++, Linux, Python, and WebGL</strong>, I seamlessly bridge low-level embedded systems with high-fidelity simulations. I am driven to tackle complex challenges and am fully equipped to pivot and deliver immediate impact in any fast-paced engineering role.</p>
+			</div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="experience-section">
+        <div class="wrapper">
+            <h3 class="section-title animate-on-scroll">Work Experience</h3>
+
+            <div class="experience-timeline">
+
+                <!-- Apple -->
+                <div class="experience-card animate-on-scroll">
+                    <div class="exp-card-inner">
+                        <div class="exp-header">
+                            <div class="exp-company-info">
+                                <div class="exp-company-logo apple-logo">
+                                    <i class="fab fa-apple"></i>
+                                </div>
+                                <div class="exp-meta">
+                                    <h4 class="exp-role">Software Development Engineering Intern</h4>
+                                    <span class="exp-company">Apple Inc. &mdash; Bangalore, India</span>
+                                </div>
+                            </div>
+                            <div class="exp-date-badge">
+                                <i class="far fa-calendar-alt"></i>
+                                Jan 2026 &ndash; June 2026
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Architected a custom <strong>Claude Code Skill File</strong> to automate generation of diagnostic scripts; codified domain-specific log-parsing constraints and context injection for terminal agents, <strong>reducing log analysis time by 70%</strong>.</li>
+                            <li>Instrumented diagnostic events across <strong>5G RRC features</strong> to enhance system observability and debuggability of the modem stack.</li>
+                            <li>Reduced latency in <strong>5G modem software</strong> by optimizing state handling through additional intermediate state processing.</li>
+                            <li>Built a <strong>3D cell visualization tool</strong> using Three.js to track and analyze cell changes over time from real device logs.</li>
+                        </ul>
+                        <div class="exp-tech-stack">
+                            <span class="tech-badge">5G RRC</span>
+                            <span class="tech-badge">C</span>
+                            <span class="tech-badge">Agentic AI</span>
+                            <span class="tech-badge">Claude Code</span>
+                            <span class="tech-badge">Three.js</span>
+                            <span class="tech-badge">Bash</span>
+                            <span class="tech-badge">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cisco -->
+                <div class="experience-card animate-on-scroll">
+                    <div class="exp-card-inner">
+                        <div class="exp-header">
+                            <div class="exp-company-info">
+                                <div class="exp-company-logo img-logo">
+                                    <img src="cisco-logo.svg" alt="Cisco" class="company-logo-img cisco-img">
+                                </div>
+                                <div class="exp-meta">
+                                    <h4 class="exp-role">Technical Intern</h4>
+                                    <span class="exp-company">Cisco Systems, Inc. &mdash; Bangalore, India</span>
+                                </div>
+                            </div>
+                            <div class="exp-date-badge">
+                                <i class="far fa-calendar-alt"></i>
+                                June 2025 &ndash; July 2025
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Gained hands-on experience with remote server access, <strong>Docker containers</strong>, <strong>Kubernetes clusters</strong>, and cloud-native 5G network architecture.</li>
+                            <li>Profiled <strong>CPU-level power optimization</strong> by tuning frequency of individual CPUs on 5G core network servers to analyze performance-power trade-offs.</li>
+                        </ul>
+                        <div class="exp-tech-stack">
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">5G Core</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">Cloud-Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research -->
+                <div class="experience-card animate-on-scroll">
+                    <div class="exp-card-inner">
+                        <div class="exp-header">
+                            <div class="exp-company-info">
+                                <div class="exp-company-logo img-logo pes-logo-bg">
+                                    <img src="pes-logo.png" alt="PES University" class="company-logo-img">
+                                </div>
+                                <div class="exp-meta">
+                                    <h4 class="exp-role">Research Intern</h4>
+                                    <span class="exp-company">CDSAML, PES University &mdash; Bangalore, India</span>
+                                </div>
+                            </div>
+                            <div class="exp-date-badge">
+                                <i class="far fa-calendar-alt"></i>
+                                June 2024 &ndash; July 2024
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Designed a <strong>privacy-preserving federated learning</strong> system for real-time yoga pose classification, achieving <strong>95% accuracy</strong> across 9 unique poses.</li>
+                            <li>Engineered an adaptive physics-based balance detection model using center of gravity and principle of moments to support 90% of body types.</li>
+                            <li>Published and presented research paper <strong>&ldquo;FLYCNet&rdquo;</strong> at <strong>IEEE ICIIS 2024 (IIT Madras)</strong>.</li>
+                        </ul>
+                        <div class="exp-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">Flower</span>
+                            <span class="tech-badge">Federated Learning</span>
+                            <span class="tech-badge">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="work">
    		<div class="wrapper">
-        	<h2>Check Out My Best Projects</h2>
-        	<section class="featured">
-                <article>
-                	<!-- ------------------------------------------------------
-                    Link the image below to the detail page for this project.
-                    Use the page.html file to make that page. Also link the 
-                    anchor tag in the paragraph below to the same page.
-                    ------------------------------------------------------- -->
-                	<a href="https://github.com/SrivishnuGade/ARVR-Miniproject"><img src="arvr.png" alt="image"></a>
+
+        	<h3 class="section-title animate-on-scroll">Featured Project</h3>
+        	
+			<!-- Featured Card -->
+			<div class="featured-card animate-on-scroll">
+				<div class="featured-glow"></div>
+				<div class="featured-grid">
+					<div class="featured-image-wrapper">
+						<a href="https://github.com/SrivishnuGade/ARVR-Miniproject" target="_blank">
+							<img src="arvr.png" alt="Traffic simulation screenshot" class="featured-img">
+						</a>
+					</div>
+					
+					<div class="featured-content">
+						<span class="project-tag-featured">AR/VR &amp; 3D Visualisation</span>
+						<h4 class="featured-title">Traffic Visualisation using Three.js</h4>
+						<p class="featured-desc">Simulates real-time traffic flow through a dynamic 4-way intersection with various signaling patterns in an engaging 3D view. Built to analyze congestion bottlenecks and visualize pathfinding behaviors.</p>
+						
+						<div class="tech-stack">
+							<span class="tech-badge">Three.js</span>
+							<span class="tech-badge">WebGL</span>
+							<span class="tech-badge">JavaScript</span>
+							<span class="tech-badge">CSS3D</span>
+						</div>
+
+						<div class="project-links">
+							<a href="https://arvr-project-kappa.vercel.app/" target="_blank" class="btn btn-primary">
+								<span>Live Visualisation</span> <i class="fas fa-external-link-alt"></i>
+							</a>
+							<a href="https://github.com/SrivishnuGade/ARVR-Miniproject" target="_blank" class="btn btn-secondary">
+								<i class="fab fa-github"></i> Source Code
+							</a>
+						</div>
+					</div>
+				</div>
+            </div>
+            
+            <h3 class="section-title animate-on-scroll">Other Projects</h3>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+
+            	<!-- Floor Plan Generator (NEW - from resume) -->
+            	<article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="floor.png" alt="Residential Floor Plan Generator">
+						<span class="category-tag">AI &amp; 3D</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">December 2025</span>
+						<h4 class="project-title">Residential Floor Plan Generator</h4>
+						<p class="project-text">LLM pipeline that processes text prompts to generate floor plan specifications. Renders immersive 3D environments for VR headsets with seasonal and diurnal sunlight physics simulation.</p>
+						<div class="tech-stack">
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">Three.js</span>
+							<span class="tech-badge">React</span>
+							<span class="tech-badge">JavaScript</span>
+						</div>
+						<a href="https://github.com/SrivishnuGade/Capstone" target="_blank" class="card-link">GitHub Repo <i class="fas fa-external-link-alt"></i></a>
+					</div>
                 </article>
-                
-                <article>
-                	<h3>Traffic visualisation using 3js</h3>
-                    <!-- <h4>Challenge Statement</h4> -->
-                    <p>Simulates traffic flow through a 4 way intersection with various signalling patterns in an engaging 3d view.</p>
-                    <p><a href="https://arvr-project-kappa.vercel.app/">Have a look at the visualisation right in your browser!</a></p> 
+				<article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="disk.png" alt="Digital Twin Disk Brake Simulation">
+						<span class="category-tag">Simulation &amp; Physics</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">Recent</span>
+						<h4 class="project-title">Digital Twin of a Disk Brake</h4>
+						<p class="project-text">Physics-based thermal simulation of a disk brake modeling kinetic energy conversion and heat dissipation. Serves as a digital twin backend for monitoring brake fade in real-time.</p>
+						<div class="tech-stack">
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">Physics Engine</span>
+							<span class="tech-badge">Digital Twin</span>
+						</div>
+						<a href="https://github.com/SrivishnuGade/DigitalTwinProject" target="_blank" class="card-link">GitHub Repo <i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</article>
+
+                <!-- URL Shortener (NEW - from resume) -->
+                <article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="benchmark.png" alt="Load-Balanced URL Shortener">
+						<span class="category-tag">DevOps</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">April 2025</span>
+						<h4 class="project-title">Load-Balanced URL Shortener</h4>
+						<p class="project-text">Microservices URL shortener on a Kubernetes cluster with Horizontal Pod Autoscaling. Stress-tested with 200,000 API calls at 100 parallel requests, achieving 99.9% system availability.</p>
+						<div class="tech-stack">
+							<span class="tech-badge">Docker</span>
+							<span class="tech-badge">Kubernetes</span>
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">Redis</span>
+						</div>
+					</div>
                 </article>
-            </section> <!-- end row -->
             
-            
-            <!-- ------------------------------------------------------
-            The projects section is for additional projects. I put four in
-			here, but it could be more, or less. You just have to pay
-			attention to how they wrap, and how many you want per row.
-            
-            Note that each image should be linked to the page with more
-            detailed information about that project. You can use a copy of
-            page.html to create those pages.
-            ------------------------------------------------------- -->
-            
-            <section class="projects">
-            
-            	<article>
-                	<h3>Yoga pose detection</h3>
-                	<a href="#"><img src="Warrior2.png"></a>
-                    <p><strong>2024 Summer Internship</strong> </p>
-                    <p><strong>Description:</strong> Detects yoga poses in real time using privacy preserving techniques.</p>
-                </article>
-                
-                <article>
-                	<h3>Cache Implementation</h3>
-                	<a href="https://github.com/SrivishnuGade/CacheImplementation"><img src="cache.png" alt="image"></a>
-                    <p><strong>Computer Architecture</strong> </p>
-                    <p><strong>Description:</strong> 
-                        Simulates a cache with various replacement techniques.</p>
-                </article>
-                
-                <article>
-                	<h3>Connect4 game</h3>
-                	<a href="https://github.com/SrivishnuGade/Connect4Game"><img src="connect4.jpeg" alt="image"></a>
-                    <p><strong>Python</strong> </p>
-                    <p>
-                        <strong>Description:</strong> 
-                        A fun game to connect 4 dots horizontaly, verticaly or diagonally.</p>
+            	<article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="Warrior2.png" alt="Yoga Pose Detection screenshot">
+						<span class="category-tag">Computer Vision</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">Summer 2024 Research Internship</span>
+						<h4 class="project-title">Yoga Pose Detection (FLYCNet)</h4>
+						<p class="project-text">Privacy-preserving federated learning system for real-time yoga pose classification with 95% accuracy across 9 poses. Published at <strong>IEEE ICIIS 2024</strong>.</p>
+						<div class="tech-stack">
+							<span class="tech-badge">TensorFlow</span>
+							<span class="tech-badge">Flower</span>
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">OpenCV</span>
+						</div>
+					</div>
                 </article>
 				
-				<article>
-                	<h3>Battery Management</h3>
-                	<a href="https://github.com/uchitnm/Battery-Management-System"><img src="battery.jpeg" alt="image"></a>
-                    <p><strong>Database Management</strong> </p>
-                    <p>
-                        <strong>Description:</strong> 
-                        Suggests batteries for specific devices based on cost per day performance.</p>
+				<article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="cache.png" alt="Cache Simulation screenshot">
+						<span class="category-tag">Systems</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">Computer Architecture</span>
+						<h4 class="project-title">Cache Implementation</h4>
+						<p class="project-text">Simulates hardware cache architecture showing hit/miss ratios with various replacement algorithms (LRU, FIFO, LFU).</p>
+						<div class="tech-stack">
+							<span class="tech-badge">C++</span>
+							<span class="tech-badge">Simulation</span>
+							<span class="tech-badge">Algorithms</span>
+						</div>
+						<a href="https://github.com/SrivishnuGade/CacheImplementation" target="_blank" class="card-link">View Repository <i class="fas fa-arrow-right"></i></a>
+					</div>
+                </article>
+				
+				<article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="connect4.jpeg" alt="Connect4 Game screenshot">
+						<span class="category-tag">Gaming</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">Python Project</span>
+						<h4 class="project-title">Connect4 Game</h4>
+						<p class="project-text">A custom local multiplayer board game implementing classic rules and diagonal check algorithms.</p>
+						<div class="tech-stack">
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">Pygame</span>
+							<span class="tech-badge">GUI</span>
+						</div>
+						<a href="https://github.com/SrivishnuGade/Connect4Game" target="_blank" class="card-link">Play Game <i class="fas fa-arrow-right"></i></a>
+					</div>
+                </article>
+				
+				<article class="project-card animate-on-scroll">
+					<div class="card-glow"></div>
+					<div class="project-img-container">
+						<img src="battery.jpeg" alt="Battery Management system screenshot">
+						<span class="category-tag">Database</span>
+					</div>
+					<div class="project-info">
+						<span class="project-timeline">Database Management</span>
+						<h4 class="project-title">Battery Management</h4>
+						<p class="project-text">Desktop app recommending batteries based on cost-per-day metrics, reducing expenses by up to 30% across 5 hardware categories.</p>
+						<div class="tech-stack">
+							<span class="tech-badge">MySQL</span>
+							<span class="tech-badge">Python</span>
+							<span class="tech-badge">Tkinter</span>
+						</div>
+						<a href="https://github.com/uchitnm/Battery-Management-System" target="_blank" class="card-link">View Database Schema <i class="fas fa-arrow-right"></i></a>
+					</div>
                 </article>
             
-            </section><!-- end row -->
-            
-        </div> <!-- end work wrapper -->
-    </section>
-    
-    
-    <!-- ------------------------------------------------------
-    This is the about and contact section. The links in the main
-    navigation link to this section. 
-    ------------------------------------------------------- -->
-    
-    <section id="about-contact" class="secondary">
-   		<div class="wrapper">
-        	
-			<div class="profile-photo">
-            	<img src="me.png" alt="image">
             </div>
-			
-            <article>
-				<h2>About Me</h2>
-				<p>I am a final year Computer Science Engineering student. I enjoy building real-world projects and continuously 
-                    learning new technologies. Currently, I’m looking for full-time job opportunities starting mid-2026.</p>
-				<h3>Skills</h3>
-				<p>
-                    <strong>Languages:</strong> Python, C, JavaScript<br>
-                    <strong>Frameworks & Tools:</strong> TensorFlow, Git, 3js<br>
-                    <strong>Databases:</strong> MySQL, Neo4j<br>
-                    <strong>Other:</strong> Data Structures & Algorithms, Computer Networks, Operating Systems<br>
-                </p>
-			</article> 
-                
-			<article>
-				<h2>Contact Me!</h2>
-				<p>I’d love to connect if you’re hiring or open to collaboration!</p>
-
-				<!-- ------------------------------------------------------
-				Be sure to encode your email address at this site, so you 
-				don't get spam. http://wbwip.com/wbw/emailencoder.html
-				------------------------------------------------------- -->
-
-				<p><i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:gade.srivishnu@gmail.com">gade.srivishnu@gmail.com</a><br>
-				<i class="fa fa-phone" aria-hidden="true"></i>+91 9886989843</p>
-
-				<!-- ------------------------------------------------------
-				You can see here that I have included font-awesome. It is used
-				to create the icons above and below. You can go to the font-awesome
-				website to see the available icons and swap some out.
-				------------------------------------------------------- -->
-
-				<p class="social">
-                    <a href="https://www.linkedin.com/in/srivishnugade" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/SrivishnuGade" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="https://www.hackerrank.com/profile/PES1UG22CS615" target="_blank"><i class="fab fa-hackerrank fa-2x"></i></a>
-				</p>
-			</article>
-                   
+            
         </div>
     </section>
     
+    <!-- About and Contact Section -->
+    <section id="about-contact" class="about-contact-section">
+   		<div class="wrapper">
+			<div class="about-contact-grid">
+        	
+				<div class="profile-column animate-on-scroll">
+					<div class="profile-photo-wrapper">
+						<div class="avatar-glow"></div>
+						<img src="me.png" alt="Srivishnu Muni Gade" class="profile-photo">
+					</div>
+				</div>
+				
+				<div class="info-column animate-on-scroll">
+					<div class="about-content">
+						<h2>About Me</h2>
+						<p>I am a multi-talented Computer Science Engineering graduate driven by a passion for solving hard problems. With experience spanning <strong>5G systems, low-level systems programming, cloud-native microservices, and AI-driven 3D graphics</strong>, my greatest strength is my ability to learn rapidly and master new technology stacks. I just completed my <strong>6-month SDE internship at Apple</strong> and my <strong>B.Tech. at PES University</strong>, proving my capacity to thrive and adapt in world-class engineering environments.</p>
+						<p>I published research on privacy-preserving federated learning at <strong>IEEE ICIIS 2024</strong> (IIT Madras), hold a <strong>9.25 GPA</strong>, and am <strong>actively looking for full-time roles &mdash; available to join immediately.</strong> Whether a role demands optimizing embedded C++ code, orchestrating Kubernetes clusters, or engineering full-stack applications, I am ready to ramp up quickly and make an immediate impact on day one.</p>
+						
+						<h3>Skills &amp; Expertise</h3>
+						<div class="skills-category">
+							<strong>Languages:</strong>
+							<div class="tags-container">
+								<span class="skill-tag">Python</span>
+								<span class="skill-tag">C</span>
+								<span class="skill-tag">C++</span>
+								<span class="skill-tag">Go</span>
+								<span class="skill-tag">Java</span>
+								<span class="skill-tag">JavaScript</span>
+								<span class="skill-tag">SQL</span>
+								<span class="skill-tag">R</span>
+								<span class="skill-tag">MATLAB</span>
+							</div>
+						</div>
+						<div class="skills-category">
+							<strong>Web &amp; Frameworks:</strong>
+							<div class="tags-container">
+								<span class="skill-tag">React</span>
+								<span class="skill-tag">Three.js</span>
+								<span class="skill-tag">WebGL</span>
+								<span class="skill-tag">Unity</span>
+								<span class="skill-tag">OpenCV</span>
+								<span class="skill-tag">TensorFlow</span>
+								<span class="skill-tag">Flower</span>
+								<span class="skill-tag">Tkinter</span>
+							</div>
+						</div>
+						<div class="skills-category">
+							<strong>DevOps &amp; Tools:</strong>
+							<div class="tags-container">
+								<span class="skill-tag">Docker</span>
+								<span class="skill-tag">Kubernetes</span>
+								<span class="skill-tag">Git</span>
+								<span class="skill-tag">Linux</span>
+								<span class="skill-tag">Bash</span>
+								<span class="skill-tag">Arduino</span>
+							</div>
+						</div>
+						<div class="skills-category">
+							<strong>Databases:</strong>
+							<div class="tags-container">
+								<span class="skill-tag">MySQL</span>
+								<span class="skill-tag">MongoDB</span>
+								<span class="skill-tag">Redis</span>
+								<span class="skill-tag">Neo4j</span>
+							</div>
+						</div>
+						<div class="skills-category">
+							<strong>Agentic AI:</strong>
+							<div class="tags-container">
+								<span class="skill-tag">Claude Code</span>
+								<span class="skill-tag">MCP</span>
+								<span class="skill-tag">Tool-Calling</span>
+								<span class="skill-tag">VS Code Agents</span>
+							</div>
+						</div>
+						<div class="skills-category">
+							<strong>Core Concepts:</strong>
+							<div class="tags-container">
+								<span class="skill-tag">Data Structures &amp; Algorithms</span>
+								<span class="skill-tag">5G / Mobile Networks</span>
+								<span class="skill-tag">TCP / Computer Networks</span>
+								<span class="skill-tag">Federated Learning</span>
+								<span class="skill-tag">Operating Systems</span>
+								<span class="skill-tag">Computer Architecture</span>
+								<span class="skill-tag">Compiler Design</span>
+							</div>
+						</div>
+
+						<!-- Certifications -->
+						<h3>Certifications</h3>
+						<div class="certifications-list">
+							<div class="cert-item">
+								<i class="fas fa-certificate cert-icon"></i>
+								<div class="cert-info">
+									<span class="cert-name">5G Protocols &mdash; RRC</span>
+									<span class="cert-issuer">Mpirical &bull; Feb 2026</span>
+								</div>
+							</div>
+							<div class="cert-item">
+								<i class="fas fa-certificate cert-icon"></i>
+								<div class="cert-info">
+									<span class="cert-name">Introduction to IoT</span>
+									<span class="cert-issuer">Cisco Networking Academy &bull; Jan 2025</span>
+								</div>
+							</div>
+							<div class="cert-item">
+								<i class="fas fa-certificate cert-icon"></i>
+								<div class="cert-info">
+									<span class="cert-name">Cypher Fundamentals</span>
+									<span class="cert-issuer">Neo4j &bull; Nov 2024</span>
+								</div>
+							</div>
+							<div class="cert-item">
+								<i class="fas fa-certificate cert-icon"></i>
+								<div class="cert-info">
+									<span class="cert-name">Simulink Fundamentals</span>
+									<span class="cert-issuer">MathWorks &bull; Jan 2024</span>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+				
+				<div class="contact-column animate-on-scroll">
+					<div class="contact-card">
+						<h2>Let's Connect!</h2>
+						<p>I am open to engineering roles, interesting open-source collaborations, and tech chats. Feel free to reach out directly.</p>
+						
+						<div class="contact-methods">
+							<a href="mailto:gade.srivishnu@gmail.com" class="contact-item">
+								<div class="contact-icon"><i class="fas fa-envelope"></i></div>
+								<div class="contact-details">
+									<span>Email Me</span>
+									<strong>gade.srivishnu@gmail.com</strong>
+								</div>
+							</a>
+							<a href="tel:+919886989843" class="contact-item">
+								<div class="contact-icon"><i class="fas fa-phone"></i></div>
+								<div class="contact-details">
+									<span>Call Me</span>
+									<strong>+91 98869 89843</strong>
+								</div>
+							</a>
+						</div>
+						
+						<div class="social-links-container">
+							<span>Find me on</span>
+							<div class="social-icons">
+								<a href="https://www.linkedin.com/in/srivishnugade" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+								<a href="https://github.com/SrivishnuGade" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+								<a href="https://www.hackerrank.com/profile/PES1UG22CS615" target="_blank" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+        </div>
+    </section>
     
-    <!-- ------------------------------------------------------
-    The footer section is not doing much on this page. Add more
-    content if necessary.
-    ------------------------------------------------------- -->
-    <footer class="primary">
+    <!-- Footer -->
+    <footer>
         <div class="wrapper">
             <p class="centered">
-                &copy; 2025 Srivishnu Muni Gade | Built using HTML, CSS & JavaScript
+                &copy; 2026 Srivishnu Muni Gade &bull; Built with HTML, Custom CSS &amp; JS
                 <br>
-                <small>Last updated: April 2025</small>
+                <span class="last-updated">Last updated: July 2026</span>
             </p>
         </div>
     </footer>
 
+	<!-- Include script.js -->
+	<script src="script.js"></script>
+	<!-- Three.js Hero Animation -->
+	<script src="threejs-hero.js?v=3"></script>
 </body>
 </html>
